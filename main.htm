@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+			<meta charset="utf-8">		
+			<meta name="Avs: Graphics test" content="3d engine implementation">
+			<title>Avs: Graphics test</title> 
+			<style>
+				body {
+				background-color: grey;	}
+				#maincanvas { 
+					width: 400px;
+					height: 400px;
+					background-color: black;
+					display: block;
+					margin:auto;}	
+				#info{ 
+					width :400px;					
+					margin:auto;}
+				#control{ 
+					width :400px;					
+					margin:auto;}
+			</style>
+    </head>
+   
+	<body> 
+		<canvas id="maincanvas"></canvas>
+		<div id="info">info</div>
+		<div id="control">:</div>
+		
+        <!-- libraries -->     
+		<script src="lib/jquery-2.1.0.min.js"></script>		
+        <script src="lib/gl-matrix.js"></script>
+		<script src="avsMat.js"></script>		
+		
+		<!-- graphics --> 
+		<script src="geometry.js"></script>
+		<script src="entity.js"></script>
+		<script src="engine.js"></script>
+		<script src="render.js"></script>
+		
+		<!-- interaction --> 
+		<script src="event.js"></script>
+		<script src="view.js"></script>
+		
+		<!-- interface --> 
+		<script src="main.js"></script>
+        
+        
+    </body>
+</html>

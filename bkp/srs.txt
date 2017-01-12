@@ -1,0 +1,28 @@
+only triangles
+dont use edge table
+pipelining blocks should be seperate
+more focus on structure than optimisation
+
+less focus on:
+curve modelling
+interface
+
+
+//previously: calculate all vertex normals and edge table with face adjancy
+for each object
+	calculate composite matrix
+	transform whole mesh with matrix //vertex redundancy removal
+	for each triangle:
+		back face removal by cyclicity //face redundancy removal
+	create edge flow table  //edge redundancy removal
+order objects from front to back acc to centre 
+for each scan line: for each object	from front to back 
+	manage edge flow table //todo merge all objects edge table
+	interpolate vertically x,z edges crossing that scanline
+	for each edge pairs:  //todo check for front back edges
+		interpolate horizontally z
+		z buffer compare://lighting redundancy removal
+			interpolate normals, colours
+			shadow compare
+			lighting calculation
+			put pixel
